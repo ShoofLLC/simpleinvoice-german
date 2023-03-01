@@ -1,0 +1,33 @@
+\documentclass[german]{article}
+
+\usepackage{simpleinvoice}
+
+\begin{document}
+
+\setinvoicetitle{Rechnung}
+\setinvoicenumber{420}
+
+\setreceivername{Max Musterman}
+\setreceiveraddress{Abrechnungsaddresse 35C \\ 10100 Berlin}
+
+\setname{Mein Name}
+\setaddress{Firmensitz 14 \\ 0000 Berlin}{Streetname 4644C / 0000 City}
+\setphonenumber{+49 xxx 0000000}
+\setemail{mail@domain.com}
+
+\setyourref{Firma Musterfirma}
+\setourref{12345678890} % USt-ID-Nr. 
+
+\setinvoicedate{April 1, 2023}
+\setdeadline{21}     % extends deadline to April 22, 2017
+
+\additem{4 chairs}{100 EUR}{0}{400 EUR}
+\additem{1 table}{250 EUR}{0}{250 EUR}
+
+\setsubtotal{650 EUR}
+\setvat{0 EUR}
+\settotal{650 EUR}
+\setaccountnumber{IBAN: DEXX 1234 56 78910}
+\makeinvoice
+
+\end{document}
